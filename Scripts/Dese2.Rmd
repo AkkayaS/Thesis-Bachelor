@@ -1,0 +1,619 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#Filtering on gene level for DESEQ2 preparation
+
+gene_count <- read.csv("/Users/selinakkaya/Documents/Bachelor_Arbeit/data/tximport_lrz/count_table_new_data.csv",)
+
+#set the geneid values as rownames
+rownames(gene_count) <- gene_count$X
+
+# Get the counts data (from the 3rd column onward)
+counts <- gene_count[, 2:ncol(gene_count)]
+
+# Calculate the number of samples with values below the threshold for each gene
+below_threshold <- rowSums(counts < 0.5)
+
+# Filter genes with less than or equal to half the samples below the threshold
+filtered_gene_count <- gene_count[below_threshold <= 3, ]
+
+filtered_gene_count <- filtered_gene_count[, -c(1)]
+
+filtered_gene_count <- filtered_gene_count[, !colnames(filtered_gene_count) %in% c("RC.50")]
+
+```
+
+```{r}
+#getting the metadata
+#install.packages("readxl")
+
+library(readxl)
+
+#read the metadata from excel
+metadata <- read_excel("/Users/selinakkaya/Documents/Bachelor_Arbeit/data/barley_final_copy.xlsx")
+
+metadata <- as.data.frame(metadata)
+#Discard the study link and timepoint(too many missing NAs)
+metadata <- metadata[,-c(6,8,12)]
+
+rownames(metadata) <- metadata$AccessionID
+
+metadata <- metadata[, -c(1,2)]
+
+metadata$PseudoalignmentRate <- as.numeric(metadata$PseudoalignmentRate) / 100
+
+metadata <- metadata[!rownames(metadata) %in% c("RC.50"),]
+
+filtered_gene_count <- filtered_gene_count[, rownames(metadata)]
+
+metadata$Type <- as.factor(metadata$Type)
+
+metadata$Treatment <- as.factor(metadata$Treatment)
+
+```
+
+```{r}
+#Deseq2
+install.packages("locfit")
+library(locfit)
+library(DESeq2)
+
+#design the deseq experiment and create deseq object
+dds <- DESeqDataSetFromMatrix(countData = round(filtered_gene_count),
+                              colData = metadata,
+                              design = ~Type + Treatment )
+#perform deseq
+dds <- DESeq(dds)
+
+
+#do variance stabilizing transformation
+vsd <- varianceStabilizingTransformation(dds, blind = FALSE)
+
+mat <- assay(vsd)
+```
+
+```{r}
+alpha <- 0.05 # Threshold on the adjusted p-value
+genes_sig <- abs(res$log2FoldChange) > 2 & res$padj < alpha 
+cols <- ifelse(genes_sig, "red", "lightblue")
+#cols <- densCols(res$log2FoldChange, -log10(res$pvalue))
+plot(res$log2FoldChange, -log10(res$padj), col=cols, panel.first=grid(),
+     main="Volcano plot", xlab="Effect size: log2(fold-change)", ylab="-log10(adjusted p-value)",
+     pch=20, cex=0.6)
+abline(v=0)
+abline(v=c(-1,1), col="brown")
+abline(h=-log10(alpha), col="brown")
+
+
+# text(res$log2FoldChange[gn.selected],
+#      -log10(res$padj)[gn.selected],
+#      lab=rownames(res)[gn.selected ], cex=0.4)
+```
+
+
+```{r}
+#PCA Plot
+library(dplyr)
+library(ggplot2)
+pcaData <- plotPCA(vsd, intgroup=c("Treatment", "Pathogen"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+# Generate PCA plot with ellipses
+ggplot(pcaData, aes(PC1, PC2, color=Pathogen, shape=Treatment)) +
+  geom_point(size=3) + # Adjust point size
+  stat_ellipse(aes(group=Pathogen), linetype=2, alpha=0.5) + # Add ellipses
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  coord_fixed() + # Ensure equal aspect ratio
+  theme_minimal(base_size = 12) + # Base font size for labels
+  theme(legend.position = "right", legend.key.size = unit(1, "lines")) +
+  labs(title="PCA Plot with Ellipses")
+ggsave("/Users/selinakkaya/Documents/Bachelor_Arbeit/pca_plot.png", width = 10, height = 8, dpi = 300)
+
+
+#write_csv(pcaData, "/Users/selinakkaya/Documents/pca.csv")
+
+```
+
+
+```{r}
+
+#PCA Plot for number of aligned reads
+# Extract metadata and convert row names to a column
+metadata <- as.data.frame(colData(vsd))
+metadata$Sample_ID <- rownames(metadata) # Add row names as a new column
+metadata$ReadsPseudoaligned <- as.numeric(metadata$ReadsPseudoaligned) # Replace with your reads column name
+
+# Extract PCA data with grouping information
+pcaData <- plotPCA(vsd, intgroup=c("Treatment", "Pathogen"), returnData=TRUE)
+
+# Merge PCA data with metadata using Sample_ID
+pcaData <- merge(pcaData, metadata[, c("Sample_ID", "tissue")], by.x="name", by.y="Sample_ID")
+
+# Generate PCA plot with color scaling for reads
+ggplot(pcaData, aes(PC1, PC2, color=tissue, shape=Treatment)) +
+  geom_point(size=3) + # Adjust point size
+  stat_ellipse(aes(group=Pathogen), linetype=2, alpha=0.5) + # Add ellipses by Pathogen
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  coord_fixed() + # Ensure equal aspect ratio
+  scale_color_viridis_c(option="plasma", name="Pseudoalignment rate(%)") + # Color gradient for reads
+  theme_minimal(base_size = 12) + # Base font size for labels
+  theme(legend.position = "right", legend.key.size = unit(1, "lines")) +
+  labs(title="PCA Plot with Color Scaling for Reads")
+
+
+
+```
+
+
+```{r}
+#WGCNA 
+
+#install.packages("WGCNA")
+
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+
+#BiocManager::install("WGCNA", force = TRUE)
+
+library(WGCNA)
+#transforming the data.frame so columns now represent genes and rows represent samples
+mat <- as.data.frame(t(mat))
+
+#check the data and return a list object of samples and genes that pass its filtering criteria
+gsg <- goodSamplesGenes(mat)
+
+summary(gsg)
+
+#see if the function identified any possible outlier
+gsg$allOK
+
+sampleTree <- hclust(dist(mat), method = "average") #Clustering samples based on distance 
+
+#Setting the graphical parameters
+par(cex = 0.6);
+par(mar = c(0,4,2,0))
+
+#Plotting the cluster dendrogram
+plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="", cex.lab = 1.5,
+cex.axis = 1.5, cex.main = 2,  cex = 0.4, las = 2)
+
+```
+
+
+```{r}
+#determine what the appropriate 𝛽 parameter will be to calculate our adjacency matrix.
+spt <- pickSoftThreshold(mat, networkType = "signed hybrid")
+
+print(spt)
+#plot the 𝑅2 values as a function of the soft thresholds
+par(mar=c(1,1,1,1))
+plot(spt$fitIndices[,1],spt$fitIndices[,2],
+xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
+main = paste("Scale independence"))
+text(spt$fitIndices[,1],spt$fitIndices[,2],col="red")
+abline(h=0.80,col="red")
+
+#plot mean connectivity
+par(mar=c(1,1,1,1))
+plot(spt$fitIndices[,1], spt$fitIndices[,5],
+xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
+main = paste("Mean connectivity"))
+text(spt$fitIndices[,1], spt$fitIndices[,5], labels= spt$fitIndices[,1],col="red")
+```
+
+```{r}
+#calling the adjacency function
+
+softPower <- 6
+adjacency <- adjacency(mat, power = softPower, type = "signed hybrid")
+
+#convert the adjacency matrix into a TOM similarity matrix
+TOM <- TOMsimilarity(adjacency)
+TOM.dissimilarity <- 1-TOM
+
+#creating the dendrogram 
+geneTree <- hclust(as.dist(TOM.dissimilarity), method = "average") 
+
+#plotting the dendrogram
+sizeGrWindow(12,9)
+plot(geneTree, xlab="", sub="", main = "Gene clustering on TOM-based dissimilarity", 
+labels = FALSE, hang = 0.04)
+
+Modules <- cutreeDynamic(dendro = geneTree, distM = TOM.dissimilarity, deepSplit = 2, pamRespectsDendro = FALSE, minClusterSize = 30)
+
+table(Modules)
+
+ModuleColors <- labels2colors(Modules) #assigns each module number a color
+table(ModuleColors) #returns the counts for each color (aka the number of genes within each module)
+
+barplot(table(ModuleColors), col = names(table(ModuleColors)), 
+        main = "Module Colors and Gene Counts", 
+        ylab = "Number of Genes", 
+        las = 2)  # Rotates x-axis labels for better readability
+
+#plots the gene dendrogram with the module colors
+plotDendroAndColors(geneTree, ModuleColors,"Module",
+dendroLabels = FALSE, hang = 0.03,
+addGuide = TRUE, guideHang = 0.05,
+main = "Gene dendrogram and module colors")
+```
+
+```{r}
+#Module Eigengene Identification
+MElist <- moduleEigengenes(mat, colors = ModuleColors)
+MEs <- MElist$eigengenes
+head(MEs)
+```
+
+```{r}
+#Module Merging
+ME.dissimilarity = 1-cor(MElist$eigengenes, use="complete") #Calculate eigengene dissimilarity
+
+METree = hclust(as.dist(ME.dissimilarity), method = "average") #Clustering eigengenes 
+par(mar = c(0,4,2,0)) #seting margin sizes
+par(cex = 0.6);#scaling the graphic
+plot(METree)
+abline(h=.25, col = "red") #a height of .25 corresponds to correlation of .75
+
+merge <- mergeCloseModules(mat, ModuleColors, cutHeight = 0.25)
+
+# The merged module colors, assigning one color to each module
+mergedColors = merge$colors
+# Eigengenes of the new merged modules
+mergedMEs = merge$newMEs
+
+plotDendroAndColors(geneTree, cbind(ModuleColors, mergedColors), 
+c("Original Module", "Merged Module"),
+dendroLabels = FALSE, hang = 0.03,
+addGuide = TRUE, guideHang = 0.05,
+main = "Gene dendrogram and module colors for original and merged modules")
+```
+
+```{r}
+#Trait matching
+
+library(dplyr)
+
+metadata_go <- read_excel("/Users/selinakkaya/Documents/Bachelor_Arbeit/data/barley_final_copy.xlsx")
+
+metadata_go <- as.data.frame(metadata_go)
+
+rownames(metadata_go) <- metadata_go$AccessionID
+
+metadata_go <- metadata_go[!rownames(metadata_go) %in% c("RC.50"),]
+
+metadata_go <- metadata_go[, -c(1,6,8)]
+
+# Extract unique pathogen names
+unique_pathogens <- unique(metadata_go$Pathogen)
+
+# Create binary columns for each pathogen
+for (pathogen in unique_pathogens) {
+  metadata_go[[pathogen]] <- ifelse(metadata_go$Pathogen == pathogen, 1, 0)
+}
+
+# Extract unique treatment names
+unique_treatment <- unique(metadata_go$Treatment)
+
+# Create binary columns for each treatment
+for (treatment in unique_treatment) {
+  metadata_go[[treatment]] <- ifelse(metadata_go$Treatment == treatment, 1, 0)
+}
+
+for (pathogen in unique_pathogens) {
+
+    # Construct the column name as "Pathogen-TREATMENT"
+    col_name <- paste0(pathogen, "-Infected")
+
+    # Create the column: 1 if the sample matches both pathogen and treatment, else 0
+    metadata_go[[col_name]] <- ifelse(metadata_go$Pathogen == pathogen & 
+                                      metadata_go$Treatment == "Infected", 1, 0)
+  
+}
+# Extract unique type names
+unique_types <- unique(metadata_go$Type)
+
+#Create binary columns for each type
+for (type in unique_types) {
+  metadata_go[[type]] <- ifelse(metadata_go$Type == type & metadata_go$Treatment == "Infected" ,1, 0 )
+}
+
+trait_data <- metadata_go[-c(1,2,3,4,5,7,9,10,22)]
+nGenes <- ncol(mat)
+nSamples <- nrow(mat)
+
+module.trait.correlation <- cor(mergedMEs, trait_data, use = "p") #p for pearson correlation coefficient
+
+module.trait.Pvalue = corPvalueStudent(module.trait.correlation, nSamples) #calculate the p-value associated with the correlation
+
+# Will display correlations and their p-values
+textMatrix = paste(signif(module.trait.correlation, 2), "\n(",
+signif(module.trait.Pvalue, 1), ")", sep = "");
+dim(textMatrix) = dim(module.trait.correlation)
+par(mar = c(6, 8.5, 3, 1))
+# Display the correlation values within a heatmap plot
+labeledHeatmap(Matrix = module.trait.correlation,
+xLabels = names(trait_data),
+yLabels = names(mergedMEs),
+ySymbols = names(mergedMEs),
+colorLabels = FALSE,
+colors = blueWhiteRed(50),
+textMatrix = textMatrix,
+setStdMargins = FALSE,
+cex.text = 0.2,
+cex.lab.x = 0.5,
+cex.lab.y = 0.6,
+zlim = c(-1,1),
+main = paste("Module-trait relationships"))
+
+```
+
+```{r}
+#Target Gene Identification
+
+# Define variable pathogem containing the pathogen column of traitData
+symbiont <- as.data.frame(trait_data$Symbiont)
+names(symbiont) <- "symbiont"
+
+biotroph <- as.data.frame(trait_data$Biotroph)
+names(biotroph) <- "biotroph"
+
+necrotroph <- as.data.frame(trait_data$`Pyrenophora teres f. teres-Infected`)
+names(necrotroph) <- "Necrotroph"
+
+amf <- as.data.frame(trait_data$`AMF-Infected`)
+names(amf) <- "amf"
+
+serVer <- as.data.frame(trait_data$`Serendipita vermifera-Infected`)
+names(serVer) <- "Serendipita vermifera"
+
+powMildew <- as.data.frame(trait_data$`Powdery Mildew-Infected`)
+names(powMildew) <- "Powdery Mildew"
+
+bGraminisK1 <- as.data.frame(trait_data$`Blumeria graminis f. sp. Hordei K1-Infected`)
+names(bGraminisK1) <- "Blumeria graminis f. sp. Hordei K1"
+
+pucciniStrGramini <- as.data.frame(trait_data$`Puccinia striiformis f. sp. tritici (wheat stripe rust)`)
+names(pucciniStrGramini) <- "Puccinia striiformis f. sp. tritici (wheat stripe rust)"
+
+bGraminis <- as.data.frame(trait_data$`Blumeria graminis f. sp. Hordei-Infected`)
+names(bGraminis) <- "Blumeria graminis f. sp. Hordei "
+
+#extract module names
+modNames = substring(names(mergedMEs), 3)
+
+#Using the gene significance you can identify genes that have a high significance for pathogen. Using the module membership measures you can identify genes with high module membership in interesting modules.
+
+#Calculate the module membership and the associated p-values
+geneModuleMembership = as.data.frame(cor(mat, mergedMEs, use = "p"))
+MMPvalue = as.data.frame(corPvalueStudent(as.matrix(geneModuleMembership), nSamples))
+names(geneModuleMembership) = paste("MM", modNames, sep="")
+names(MMPvalue) = paste("p.MM", modNames, sep="")
+
+#Calculate the gene significance and associated p-values
+geneTraitSignificance = as.data.frame(cor(mat, powMildew, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(powMildew), sep="")
+names(GSPvalue) = paste("p.GS.", names(powMildew), sep="")
+head(GSPvalue)
+
+GSPvalue %>%
+  arrange(GSPvalue$p.GS.symbiont) %>%
+  head()
+
+par(mar = c(5, 5, 4, 2))  
+module = "red"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for Powdery Mildew",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, bGraminisK1, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(bGraminisK1), sep="")
+names(GSPvalue) = paste("p.GS.", names(bGraminisK1), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))  
+module = "red"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for Blumeria graminis f. sp. Hordei K1 ",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, pucciniStrGramini, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(pucciniStrGramini), sep="")
+names(GSPvalue) = paste("p.GS.", names(pucciniStrGramini), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))  
+module = "red"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for Puccini graminis f. sp. Hordei  ",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, biotroph, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(biotroph), sep="")
+names(GSPvalue) = paste("p.GS.", names(biotroph), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))  
+module = "red"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for biotroph",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, necrotroph, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(necrotroph), sep="")
+names(GSPvalue) = paste("p.GS.", names(necrotroph), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))
+module = "orangered4"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for Necrotroph",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, symbiont, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(symbiont), sep="")
+names(GSPvalue) = paste("p.GS.", names(symbiont), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))
+module = "blue"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for symbiont",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, amf, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(amf), sep="")
+names(GSPvalue) = paste("p.GS.", names(amf), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))
+module = "blue"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in", module, "module"),
+ylab = "Gene significance for AMF",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+geneTraitSignificance = as.data.frame(cor(mat, serVer, use = "p"))
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples))
+names(geneTraitSignificance) = paste("GS.", names(serVer), sep="")
+names(GSPvalue) = paste("p.GS.", names(serVer), sep="")
+head(GSPvalue)
+
+par(mar = c(5, 5, 4, 2))
+module = "blue"
+column = match(module, modNames)
+moduleGenes = mergedColors==module
+verboseScatterplot(abs(geneModuleMembership[moduleGenes,column]),
+abs(geneTraitSignificance[moduleGenes,1]),
+xlab = paste("Module Membership in ", module, "module"),
+ylab = "Gene significance for Serendipita vermifer ",
+ main = paste("Module Membership vs. Gene Significance\n", module, "Module"),
+cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+```
+```{r}
+# Define the module of interest
+module = "pink"
+
+# Find the column index for the pink module in the geneModuleMembership table
+column = match(module, modNames)
+
+# Select genes in the pink module
+moduleGenes = which(mergedColors == module)
+
+# Extract MM and GS values for pink module genes
+pink_MM = geneModuleMembership[moduleGenes, column]  # Module Membership
+pink_GS = geneTraitSignificance[moduleGenes, 1]  # Gene Significance for symbiont
+
+# Define threshold criteria for hub genes (adjust based on your data)
+MM_threshold = 0.8  # Strong module association
+GS_threshold = 0.2  # High trait association
+
+# Find hub genes
+pink_hub_gene_indices = which(pink_MM > MM_threshold & abs(pink_GS) > GS_threshold)
+pink_hub_gene_names = rownames(geneModuleMembership)[moduleGenes][pink_hub_gene_indices]
+
+# Create a dataframe with hub genes and their values
+pink_hub_genes_df <- data.frame(
+  Gene = pink_hub_gene_names,
+  Module_Membership = pink_MM[pink_hub_gene_indices],
+  Gene_Significance = pink_GS[pink_hub_gene_indices]
+)
+
+# Print the dataframe
+print(pink_hub_genes_df)
+
+```
+
+
+```{r}
+#network visualization of eigengenes
+
+# Isolate weight from the clinical traits
+symbiont = as.data.frame(trait_data$Symbiont);
+names(symbiont) = "symbiont"
+
+biotroph = as.data.frame(trait_data$Biotroph)
+names(biotroph) = "biotroph"
+
+necrotroph = as.data.frame(trait_data$Necrotroph);
+names(necrotroph) = "necrotroph"
+
+drought = as.data.frame(trait_data$Drought)
+names(drought) = "drought"
+
+# Add the weight to existing module eigengenes
+MET = orderMEs(cbind(MEs, symbiont, biotroph, necrotroph, drought))
+# Plot the relationships among the eigengenes and the trait
+par(cex = 0.9)
+plotEigengeneNetworks(MET, "", marDendro = c(0,4,1,2), marHeatmap = c(5,4,1,2), cex.lab = 0.8, xLabelsAngle
+= 90)
+```
+
+```{r}
+# Specify the module of interest
+module_of_interest <- "orange"  # Change to your desired module
+
+# Get the gene names (rownames of `mat`) that belong to this module
+genes_in_module <- colnames(mat)[ModuleColors == module_of_interest]
+
+# Print or save the gene names
+print(genes_in_module)
+write.table(genes_in_module, file = paste0(module_of_interest, "_genes.txt"),
+            quote = FALSE, row.names = FALSE, col.names = FALSE)
+
+```
+
+
+
+
+
+
+
+
+
+
