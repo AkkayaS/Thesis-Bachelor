@@ -1,0 +1,243 @@
+---
+title: "Enrichment_analysis"
+output: html_document
+date: "2025-02-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r}
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#     install.packages("BiocManager")
+# 
+# BiocManager::install("clusterProfiler")
+
+library(tidyverse)
+library(clusterProfiler)
+library(tidyr)
+# modify the gene ids for pink module
+
+gene_contrast <- as.data.frame(genes_in_module)
+#gene_contrast <- as.data.frame(read.table("/Users/selinakkaya/Documents/Bachelor_Practical_Work/pink_genes.txt"))
+colnames(gene_contrast) <- "ID"
+
+#mercator mapping file modification
+
+
+mercator_names <- list.files(path = "/Users/selinakkaya/Documents/Bachelor_Arbeit", 
+                             pattern = "^mercator", full.names = TRUE)
+
+# Check the structure of the result
+str(mercator_names)
+datalist_term2gene = list()
+for (i in mercator_names) {
+        mercator_df <- read.table(i, sep=",", stringsAsFactors = FALSE)
+        mercator_df <- mercator_df %>% 
+                    mutate(Filename = paste0(i)) %>% 
+                    rename(Term = V2, Gene = V1) %>% 
+                    #mutate(Level = str_extract(Filename, regex("level[1-8]"))) %>% 
+                    mutate(Level = str_split_i(Filename, "_", 3)) #%>%
+                    #select(-Filename)
+        datalist_term2gene[[i]] <- mercator_df
+}
+term2gene <- do.call(rbind, datalist_term2gene)
+rownames(term2gene) <- NULL
+dim(term2gene)
+head(term2gene)
+##
+print("Imports are finished")
+
+
+```
+```{r}
+# Define functional levels
+levels <- c("level1", "level2", "level3", "level4", "level5", "level6", "level7"
+            ,"level8", "proscipt", "swissprot")
+
+# Check the contents of term2gene before filtering
+print("Summary of term2gene before filtering:")
+print(str(term2gene))
+print("Unique levels in term2gene:")
+print(unique(term2gene$Level))
+print("Unique filenames in term2gene:")
+print(unique(term2gene$Filename))
+# Extract gene list from filtered DEGs
+genelist <- unique(gene_contrast$ID)
+     
+#dir.create("../enrichments/")
+# Loop over levels and run enrichment analysis
+for (level in levels) {
+    print(paste("Processing enrichment for", level))
+
+    # Find matching term2gene enrichment tables
+    tempset <- term2gene %>%
+    filter(str_detect(Filename,
+    "/Users/selinakkaya/Documents/Bachelor_Arbeit/mercator_.*_barley\\.csv")) %>%
+    filter(Level == level) %>%
+    select(Term, Gene)
+    
+    # Debug: Check if the filtered term2gene table has any rows
+    print(paste("Filtered term2gene table for", level, "has", nrow(tempset), "rows"))
+    if (nrow(tempset) > 0) {
+        print("First few rows of filtered term2gene:")
+        print(head(tempset, 3))
+        
+        # Run enrichment analysis
+        enrich <- enricher(
+                    gene = genelist,
+                    pvalueCutoff = 0.1,
+                    pAdjustMethod = "BH",
+                    minGSSize = 1,
+                    maxGSSize = 100000,
+                    qvalueCutoff = 0.2,
+                    gson = NULL,
+                    TERM2GENE = tempset)
+
+        #print("Enrichment results structure:")
+        #print(str(enrich))
+        res <- data.frame(enrich)
+
+        #print("First few rows of enrichment results:")
+        #print(head(res))
+        
+        
+        # Save results if enrichment results exist
+        if (nrow(res) >= 1) {
+            filename <- 
+paste0("/Users/selinakkaya/Documents/Bachelor_Arbeit/enrichments/orange_module/"
+                               ,level, "_DESeq2_Mercator_clusterprof.csv")
+            write.csv(res, file = filename)
+
+            plot_filename <-       paste0("/Users/selinakkaya/Documents/Bachelor_Arbeit/enrichments/orange_module/"
+                                    ,level, "_DESeq2_Mercator_plot.pdf")
+            ggsave(filename = plot_filename, 
+                   plot = dotplot(enrich) + scale_fill_gradient(low = "red", high = "blue"), 
+                   width = 15, height = 10)
+            
+            barplot_filename <- paste0("/Users/selinakkaya/Documents/Bachelor_Arbeit/enrichments/orange_module/"
+                                    ,level, "_DESeq2_Mercator_barplot.pdf")
+            ggsave(filename = barplot_filename, 
+                   plot = barplot(enrich,  showCategory = 50) + scale_fill_gradient(low = "red", high = "blue"),
+                   width = 15, height = 10)
+            
+            #enrichres2 <- pairwise_termsim(enrich)
+            
+            #  treeplot_filename <- paste0("/Users/selinakkaya/Documents/Bachelor_Arbeit/enrichments/pink_module/",
+            #                             level, "_DESeq2_Mercator_treeplot.pdf")
+            # ggsave(filename = treeplot_filename,
+            #        plot = treeplot(enrichres2) +
+            #        ggtitle(paste("treeplot for", level)) ,
+            #        width = 15, height = 10)
+                  
+            #  emapplot_filename <- paste0("/Users/selinakkaya/Documents/Bachelor_Arbeit/enrichments/pink_module/", 
+            #                             level, "_DESeq2_Mercator_emapplot.pdf")
+            # ggsave(filename = emapplot_filename,
+            #        plot = emapplot(enrichres2) +
+            #        ggtitle(paste("emapplot for", level)) ,
+            #        width = 15, height = 10)
+        }
+    } else {
+        print(paste("No enrichment data found for", level, "skipping."))
+        next
+    }
+}
+
+print("All processing completed.")
+```
+
+
+```{r}
+library(enrichplot)
+
+genelist <- unique(gene_contrast$ID)
+
+tempset_2 <- term2gene %>%
+    filter(Level %in% c( "level2", "level3")) %>%
+    select(Term, Gene)
+
+filtered_terms <- tempset_2 %>%
+    filter(!Term %in% c("not assigned", "not annotated", "annotated"))
+
+enrich <- enricher(
+                    gene = genelist,
+                    pvalueCutoff = 0.1,
+                    pAdjustMethod = "BH",
+                    minGSSize = 1,
+                    maxGSSize = 100000,
+                    qvalueCutoff = 0.2,
+                    gson = NULL,
+                    TERM2GENE = filtered_terms)
+res <- as.data.frame(enrich)
+#cnetplot(enrich)
+enrichres2 <- pairwise_termsim(enrich)
+
+treeplot(enrichres2, fontsize = 2, showCategory = 30) 
+
+```
+
+`
+```{r}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(stringr)
+
+# Set directory containing CSV files (Change this to your directory)
+data_dir <- "/Users/selinakkaya/Downloads"  # <- Change this to your folder
+
+# Get list of all CSV files in the directory
+file_list <- list.files(path = data_dir, pattern = "*.csv", full.names = TRUE)
+
+# Read and combine all CSV files, adding a "Module" column based on filename
+enrichment_data <- lapply(file_list, function(file) {
+  df <- read_csv(file)  # Read the CSV file
+  df$Module <- str_remove(basename(file), ".csv")  # Extract module name from filename
+  return(df)
+}) %>% bind_rows()
+
+# Extract the first number from GeneRatio (before "/")
+enrichment_data <- enrichment_data %>%
+  mutate(GeneRatio_Num = as.numeric(str_extract(GeneRatio, "^[0-9]+")))
+
+# Convert p.adjust to log scale and cap values at 30
+enrichment_data <- enrichment_data %>%
+  mutate(logFDR = pmin(-log10(p.adjust), 30))  # Cap logFDR at 30
+
+# Create the bubble plot with improved readability
+ggplot(enrichment_data, aes(x = Description, y = Module, size = GeneRatio_Num, color = logFDR)) +
+  geom_point(alpha = 0.8) +  # Improve visibility with transparency
+  scale_color_gradient(low = "purple", high = "red") +  # Adjust color contrast
+  scale_size(range = c(2,10)) +  # Adjust bubble sizes
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 40)) +  # Wrap long pathway names
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),  # Rotate x-axis labels
+    axis.text.y = element_text(size = 12),  # Increase readability of module names
+    plot.margin = margin(15, 15, 15, 15),  # Add padding around the plot
+    legend.title = element_text(size = 14),  # Increase legend text size
+    legend.text = element_text(size = 12)
+  ) +
+  labs(
+    title = "Pathway Level Enrichment Across Modules",
+    x = "Pathway",
+    y = "Module",
+    color = "logFDR (Capped at 30)",
+    size = "Gene Count"
+  )
+
+
+
+```
+
+
