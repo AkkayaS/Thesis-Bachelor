@@ -1,4 +1,4 @@
-Unnamed: 0,AccessionID,LibraryLayout,Pathogen,tissue,cultivar,TimePoint,Treatment,study,PseudoalignmentRate,Type,ReadsPseudoaligned,LibrarySelection,Instrument
+Row,AccessionID,LibraryLayout,Pathogen,tissue,cultivar,TimePoint,Treatment,study,PseudoalignmentRate,Type,ReadsPseudoaligned,LibrarySelection,Instrument
 1,SRR5320385,paired,Puccinia striiformis f. sp. tritici (wheat stripe rust),leaf,Manchuria,,Infected,https://www.science.org/doi/10.1126/sciadv.abn7258,74.3,Biotroph,42352572,Random PCR,Illumina HiSeq 2500
 2,SRR5320386,paired,Puccinia striiformis f. sp. tritici (wheat stripe rust),leaf,Haruna Nijo,,Infected,https://www.science.org/doi/10.1126/sciadv.abn7259,73.0999999999999,Biotroph,28536249,Random PCR,Illumina HiSeq 2500
 3,SRR5320387,paired,Puccinia striiformis f. sp. tritici (wheat stripe rust),leaf,Haruna Nijo,,Infected,https://www.science.org/doi/10.1126/sciadv.abn7260,72.9,Biotroph,28471016,Random PCR,Illumina HiSeq 2500
