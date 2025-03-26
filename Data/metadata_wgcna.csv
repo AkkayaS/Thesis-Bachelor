@@ -1,0 +1,239 @@
+"","LibraryLayout","Pathogen","tissue","cultivar","Treatment","PseudoalignmentRate","Type","ReadsPseudoaligned","LibrarySelection","Instrument","Puccinia striiformis f. sp. tritici (wheat stripe rust)","Puccinia hordei","Serendipita vermifera","AMF","Blumeria graminis f. sp. Hordei","Blumeria graminis f. sp. Hordei K1","Puccinia graminis f. sp. Tritici","barley mild mosaic virus (BaMMV)","drought","Pyrenophora teres f. teres","Powdery Mildew","Infected","Control","Puccinia striiformis f. sp. tritici (wheat stripe rust)-Infected","Puccinia hordei-Infected","Serendipita vermifera-Infected","AMF-Infected","Blumeria graminis f. sp. Hordei-Infected","Blumeria graminis f. sp. Hordei K1-Infected","Puccinia graminis f. sp. Tritici-Infected","barley mild mosaic virus (BaMMV)-Infected","drought-Infected","Pyrenophora teres f. teres-Infected","Powdery Mildew-Infected","Biotroph","Symbiont","Drought","Necrotroph"
+"SRR5320385","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Manchuria","Infected",7430,"Biotroph",42352572,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320386","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Haruna Nijo","Infected",7309.99999999999,"Biotroph",28536249,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320387","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Haruna Nijo","Infected",7290,"Biotroph",28471016,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320388","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","CI 16153","Infected",8000,"Biotroph",45034038,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320389","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","CI 16147","Infected",6940,"Biotroph",31891031,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320390","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","CIho 4196","Infected",7800,"Biotroph",34816432,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320556","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Haruna Nijo","Infected",7390,"Biotroph",14328699,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5320557","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Haruna Nijo","Infected",7409.99999999999,"Biotroph",14562825,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5344997","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","SusPtrit","Infected",7840,"Biotroph",35353038,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5344998","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Sultan 5","Infected",7690,"Biotroph",14857560,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5344999","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Sultan 5","Infected",7709.99999999999,"Biotroph",14963829,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345000","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Q21861","Infected",7450,"Biotroph",14785264,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345001","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Q21861","Infected",7430,"Biotroph",14405899,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345002","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Pallas","Infected",7880,"Biotroph",34612637,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345003","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Maritime","Infected",7500,"Biotroph",15252625,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345004","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Maritime","Infected",7530,"Biotroph",15478050,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345005","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Igri","Infected",7590,"Biotroph",28151973,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345006","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","I 5","Infected",7430,"Biotroph",10680615,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345007","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","I 5","Infected",7459.99999999999,"Biotroph",10829900,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345009","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","HOR 1428","Infected",7890,"Biotroph",13827903,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345018","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","HOR 1428","Infected",7680,"Biotroph",13695350,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345019","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Hindmarsh","Infected",7690,"Biotroph",13811155,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345020","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Hindmarsh","Infected",7550,"Biotroph",10830785,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345023","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Heils Franken","Infected",7420,"Biotroph",14481596,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345024","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Heils Franken","Infected",7640,"Biotroph",15898704,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345025","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Grannenlose Zweizeilige","Infected",7609.99999999999,"Biotroph",16025681,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345026","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Grannenlose Zweizeilige","Infected",7520,"Biotroph",13868557,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345027","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Golden Promise","Infected",7540,"Biotroph",14159813,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345028","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Golden Promise","Infected",7480,"Biotroph",15472320,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345029","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Fong Tien","Infected",7450,"Biotroph",15068823,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345030","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Fong Tien","Infected",7370,"Biotroph",14536723,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345031","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Finniss","Infected",7340,"Biotroph",14774398,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345032","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Finniss","Infected",6230,"Biotroph",26994994,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345033","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Emir","Infected",7850,"Biotroph",33384108,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345034","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Emir","Infected",7659.99999999999,"Biotroph",29075940,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345035","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Duplex","Infected",8159.99999999999,"Biotroph",42743050,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345036","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Duplex","Infected",7450,"Biotroph",16735927,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345037","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Commander","Infected",7420,"Biotroph",16916335,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345008","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Commander","Infected",7909.99999999999,"Biotroph",13830900,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345011","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","CI 16139","Infected",7230,"Biotroph",13781635,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345012","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","CI 16139","Infected",7700,"Biotroph",16673960,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345013","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Bowman","Infected",7680,"Biotroph",16846832,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345014","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Bowman","Infected",7600,"Biotroph",14358267,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345015","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Betzes","Infected",7580,"Biotroph",14476986,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345016","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","BCD47","Infected",7470,"Biotroph",14938159,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345017","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","BCD12","Infected",7490,"Biotroph",15111481,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345021","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Baronesse","Infected",7570,"Biotroph",11385450,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345022","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Barke","Infected",7450,"Biotroph",14321376,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR5345010","paired","Puccinia striiformis f. sp. tritici (wheat stripe rust)","leaf","Barke","Infected",7259.99999999999,"Biotroph",14158535,"Random PCR","Illumina HiSeq 2500",1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607137","paired","Puccinia hordei","leaf","Bowman","Infected",7250,"Biotroph",15156283,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607138","paired","Puccinia hordei","leaf","Bowman","Control",6940,"Biotroph",26324888,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14607139","paired","Puccinia hordei","leaf","Bowman","Control",7020,"Biotroph",21607564,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14607140","paired","Puccinia hordei","leaf","Bowman","Control",6680,"Biotroph",18415125,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14607141","paired","Puccinia hordei","leaf","BW746","Infected",7430,"Biotroph",24089325,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607142","paired","Puccinia hordei","leaf","BW746","Infected",7309.99999999999,"Biotroph",20168326,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607143","paired","Puccinia hordei","leaf","BW746","Infected",7409.99999999999,"Biotroph",22938700,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607144","paired","Puccinia hordei","leaf","BW746","Control",6800,"Biotroph",16479677,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14607145","paired","Puccinia hordei","leaf","Bowman","Infected",7159.99999999999,"Biotroph",18792552,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607146","paired","Puccinia hordei","leaf","Bowman","Infected",6909.99999999999,"Biotroph",19093922,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SRR14607147","paired","Puccinia hordei","leaf","BW746","Control",6740,"Biotroph",16020672,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14607148","paired","Puccinia hordei","leaf","BW746","Control",6770,"Biotroph",16408733,"Random PCR","Illumina NovaSeq 6000",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14001691","single","Serendipita vermifera","root","Golden Promise","Infected",7080,"Symbiont",109124940,"PolyA","Illumina HiSeq 3000",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"SRR14001699","single","Serendipita vermifera","root","Golden Promise","Control",8040,"Symbiont",143701035,"PolyA","Illumina HiSeq 3000",0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR14001689","single","Serendipita vermifera","root","Golden Promise","Infected",6670,"Symbiont",126836115,"PolyA","Illumina HiSeq 3000",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"SRR14001690","single","Serendipita vermifera","root","Golden Promise","Infected",7090,"Symbiont",139346130,"PolyA","Illumina HiSeq 3000",0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960768","paired","AMF","root","Ingrid","Control",8100,"Symbiont",46643464,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960769","paired","AMF","root","Ingrid","Control",8050,"Symbiont",46338314,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960770","paired","AMF","root","Ingrid","Control",8120,"Symbiont",50178985,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960771","paired","AMF","root","Ingrid","Infected",7709.99999999999,"Symbiont",41427257,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960772","paired","AMF","root","Ingrid","Infected",7290,"Symbiont",37685825,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960773","paired","AMF","root","Ingrid","Infected",7290,"Symbiont",32224814,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960780","paired","AMF","root","Ingrid","Control",8250,"Symbiont",39432839,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960781","paired","AMF","root","Ingrid","Control",8250,"Symbiont",46618344,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960782","paired","AMF","root","Ingrid","Control",8230,"Symbiont",42957352,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR10960783","paired","AMF","root","Ingrid","Infected",7359.99999999999,"Symbiont",40147030,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960784","paired","AMF","root","Ingrid","Infected",7630,"Symbiont",41300926,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR10960785","paired","AMF","root","Ingrid","Infected",7120,"Symbiont",45224182,"cDNA","Illumina HiSeq 2500",0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+"SRR5819885","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Control",7290,"Biotroph",18098036,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR5819886","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Control",7070,"Biotroph",14825680,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR5819887","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Control",7350,"Biotroph",22389230,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR5819888","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7670,"Biotroph",18583708,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819889","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7659.99999999999,"Biotroph",26155836,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819890","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7330,"Biotroph",20680125,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819891","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7550,"Biotroph",30062932,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819892","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7530,"Biotroph",23838793,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819893","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7520,"Biotroph",24948839,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819894","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7690,"Biotroph",21924148,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819895","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7500,"Biotroph",28156975,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819896","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7470,"Biotroph",25548018,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819897","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7709.99999999999,"Biotroph",24657739,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR5819898","single","Blumeria graminis f. sp. Hordei","leaf","m11526","Infected",7500,"Biotroph",23391358,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR19091561","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6080,"Biotroph",31936735,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091562","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6120,"Biotroph",22812831,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091563","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",5930,"Biotroph",21744309,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091564","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Control",6340,"Biotroph",28150105,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR19091565","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",4590,"Biotroph",17369408,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091566","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",5660,"Biotroph",25920621,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091567","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6360,"Biotroph",25223844,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091568","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6360,"Biotroph",22972576,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091569","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",4980,"Biotroph",18208829,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091570","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",5320,"Biotroph",24008060,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091571","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6140,"Biotroph",24030046,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091572","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6330,"Biotroph",30184615,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091573","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6030,"Biotroph",31563312,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091574","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Control",6280,"Biotroph",27955080,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR19091575","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",4480,"Biotroph",19555001,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091576","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",5500,"Biotroph",19774789,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091577","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Infected",6170,"Biotroph",26648537,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR19091578","paired","Blumeria graminis f. sp. Hordei K1","leaf","BarleyX","Control",6340,"Biotroph",24213469,"Random PCR","Illumina NovaSeq 6000",0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR3657665","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",7780,"Biotroph",13913179,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657666","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",8009.99999999999,"Biotroph",12674197,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657667","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",8009.99999999999,"Biotroph",2929698,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657668","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",6190,"Biotroph",16435578,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657669","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",6170,"Biotroph",15856012,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657670","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",6390,"Biotroph",10510319,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657671","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",7740,"Biotroph",11454412,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657672","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",7720,"Biotroph",3679945,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657673","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",5650,"Biotroph",14666095,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657674","single","Blumeria graminis f. sp. Hordei K1","leaf","Pallas","Infected",6440,"Biotroph",12207122,"cDNA","Illumina HiSeq 2500",0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+"SRR3657675","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8050,"Biotroph",22162069,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657676","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7990,"Biotroph",6458007,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657677","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8090,"Biotroph",37469151,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657678","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8150,"Biotroph",37721257,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657679","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7859.99999999999,"Biotroph",36049745,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657680","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7500,"Biotroph",33427228,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657681","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7940,"Biotroph",36045296,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657682","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7740,"Biotroph",37487222,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657683","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7550,"Biotroph",34771439,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657684","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8100,"Biotroph",38961280,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657685","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8220,"Biotroph",36864197,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657686","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7740,"Biotroph",33999787,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657687","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7959.99999999999,"Biotroph",34151165,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657688","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8150,"Biotroph",36980587,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657689","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8350,"Biotroph",41327132,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657690","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8100,"Biotroph",34698216,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657691","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",8290,"Biotroph",41265019,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657692","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",7950,"Biotroph",35698201,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657694","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",3979.99999999999,"Biotroph",2180403,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657695","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",4020,"Biotroph",2866656,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657696","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6820,"Biotroph",5368309,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657697","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6790,"Biotroph",1339175,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657698","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6459.99999999999,"Biotroph",5955648,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657699","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6160,"Biotroph",1634973,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657700","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6230,"Biotroph",4116463,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657701","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",5560,"Biotroph",5164571,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657702","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6759.99999999999,"Biotroph",6304135,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657703","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",6340,"Biotroph",7034273,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657704","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",4540,"Biotroph",4182830,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657705","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",4180,"Biotroph",4102094,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657706","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",4200,"Biotroph",4213994,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657707","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",5620,"Biotroph",5814430,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR3657708","paired","Blumeria graminis f. sp. Hordei","leaf","Pallas","Infected",3600,"Biotroph",3828602,"cDNA","Illumina HiSeq 2500",0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"SRR8984104","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3600,"Biotroph",15004218,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984105","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3220,"Biotroph",10593625,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984106","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3729.99999999999,"Biotroph",14492985,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984107","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",7459.99999999999,"Biotroph",24951521,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984108","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3960,"Biotroph",13584439,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984109","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3550,"Biotroph",14501577,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984110","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3340,"Biotroph",18286705,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984111","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3760,"Biotroph",29643062,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984112","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2480,"Biotroph",10178979,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984113","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",4160,"Biotroph",16010881,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984114","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",6280,"Biotroph",25207919,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984115","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2820,"Biotroph",21963379,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984116","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3600,"Biotroph",12980697,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984117","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2770,"Biotroph",20758266,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984118","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",3290,"Biotroph",17101526,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984119","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",4970,"Biotroph",19980510,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984120","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",6490,"Biotroph",24618142,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984121","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2590,"Biotroph",6981941,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984122","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2240,"Biotroph",10871361,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984123","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",4210,"Biotroph",13664295,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984124","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",4310,"Biotroph",19227609,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984125","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",2800,"Biotroph",10727557,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984126","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",1939.99999999999,"Biotroph",7014454,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984127","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Infected",5580,"Biotroph",21701822,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"SRR8984128","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Control",7630,"Biotroph",30497280,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR8984129","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Control",7659.99999999999,"Biotroph",34972713,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR8984130","single","Puccinia graminis f. sp. Tritici","leaf","Harrington","Control",7630,"Biotroph",33123884,"cDNA","NextSeq 500",0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR23602658","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Control",7350,"Biotroph",19933975,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR23602659","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Control",7380,"Biotroph",19879426,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR23602660","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Control",7140,"Biotroph",17505962,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR23602661","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Infected",7420,"Biotroph",21411302,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+"SRR23602662","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Infected",7980,"Biotroph",18810868,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+"SRR23602663","paired","barley mild mosaic virus (BaMMV)","leaf","DAN 2","Infected",7420,"Biotroph",18499002,"cDNA","Illumina NovaSeq 6000",0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+"ERR4704277","paired","drought","leaf","Baronesse","Infected",7320,"Drought",16578765,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704278","paired","drought","leaf","Baronesse","Infected",7759.99999999999,"Drought",19293284,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704279","paired","drought","leaf","Baronesse","Infected",7480,"Drought",18633086,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704280","paired","drought","leaf","Baronesse","Control",7430,"Drought",18040294,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ERR4704281","paired","drought","leaf","Baronesse","Control",7159.99999999999,"Drought",18221909,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ERR4704282","paired","drought","leaf","Baronesse","Control",7140,"Drought",18329753,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ERR4704283","paired","drought","leaf","Otis","Infected",7870,"Drought",18962922,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704284","paired","drought","leaf","Otis","Infected",8170,"Drought",19102216,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704285","paired","drought","leaf","Otis","Infected",7790,"Drought",19812200,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"ERR4704286","paired","drought","leaf","Otis","Control",7180,"Drought",18148147,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ERR4704287","paired","drought","leaf","Otis","Control",6659.99999999999,"Drought",15542592,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ERR4704288","paired","drought","leaf","Otis","Control",7650,"Drought",18636761,"RT-PCR","Illumina NovaSeq 6000",0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR13222006","single","Pyrenophora teres f. teres","leaf","CIho 5791","Infected",7770,"Necrotroph",39975362,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222007","single","Pyrenophora teres f. teres","leaf","CIho 5792","Infected",8140,"Necrotroph",36765826,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222008","single","Pyrenophora teres f. teres","leaf","CIho 5793","Infected",8020,"Necrotroph",28053493,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222009","single","Pyrenophora teres f. teres","leaf","CIho 5794","Infected",8120,"Necrotroph",35851730,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222010","single","Pyrenophora teres f. teres","leaf","CIho 5795","Infected",8080,"Necrotroph",31064687,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222011","single","Pyrenophora teres f. teres","leaf","CIho 5796","Infected",8040,"Necrotroph",30745851,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222012","single","Pyrenophora teres f. teres","leaf","CIho 5797","Infected",8150,"Necrotroph",28883499,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222013","single","Pyrenophora teres f. teres","leaf","CIho 5798","Control",7680,"Necrotroph",31402773,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR13222014","single","Pyrenophora teres f. teres","leaf","CIho 5799","Infected",7700,"Necrotroph",34411129,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222015","single","Pyrenophora teres f. teres","leaf","CIho 5800","Infected",7780,"Necrotroph",28663252,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+"SRR13222016","single","Pyrenophora teres f. teres","leaf","CIho 5801","Control",7659.99999999999,"Necrotroph",30819830,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SRR13222017","single","Pyrenophora teres f. teres","leaf","CIho 5802","Control",7400,"Necrotroph",26548019,"Random","NextSeq 500",0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"BAY43_RA","paired","Powdery Mildew","leaf","BarleyX","Infected",2990,"Biotroph",10231359,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"BAY43_RB","paired","Powdery Mildew","leaf","BarleyX","Infected",2750,"Biotroph",6902543,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"BAY43_RC","paired","Powdery Mildew","leaf","BarleyX","Infected",3000,"Biotroph",6225385,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"BAY50_RA","paired","Powdery Mildew","leaf","BarleyX","Infected",2660,"Biotroph",7230436,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"BAY50_RB","paired","Powdery Mildew","leaf","BarleyX","Infected",2280,"Biotroph",5208173,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"BAY50_RC","paired","Powdery Mildew","leaf","BarleyX","Infected",2360,"Biotroph",5046914,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"MUC_01_RA","paired","Powdery Mildew","leaf","BarleyX","Infected",3220,"Biotroph",7183497,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"MUC_01_RB","paired","Powdery Mildew","leaf","BarleyX","Infected",2830,"Biotroph",5511222,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"MUC_01_RC","paired","Powdery Mildew","leaf","BarleyX","Infected",2560,"Biotroph",5947494,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"El01_1_RA","paired","Powdery Mildew","leaf","BarleyX","Infected",3260,"Biotroph",5327822,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"El01_1_RB","paired","Powdery Mildew","leaf","BarleyX","Infected",2440,"Biotroph",4453781,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"El01_1_RC","paired","Powdery Mildew","leaf","BarleyX","Infected",2680,"Biotroph",6317162,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.1","paired","Powdery Mildew","leaf","BarleyX","Infected",2100,"Biotroph",4155028,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.10","paired","Powdery Mildew","leaf","BarleyX","Infected",2150,"Biotroph",8374119,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.20","paired","Powdery Mildew","leaf","BarleyX","Infected",2690,"Biotroph",5853005,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.30","paired","Powdery Mildew","leaf","BarleyX","Infected",2420,"Biotroph",8546867,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.40","paired","Powdery Mildew","leaf","BarleyX","Infected",1810,"Biotroph",4798794,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RA.50","paired","Powdery Mildew","leaf","BarleyX","Infected",1540,"Biotroph",6057152,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.1","paired","Powdery Mildew","leaf","BarleyX","Infected",2580,"Biotroph",7587215,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.10","paired","Powdery Mildew","leaf","BarleyX","Infected",1889.99999999999,"Biotroph",3807998,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.20","paired","Powdery Mildew","leaf","BarleyX","Infected",1610,"Biotroph",3170518,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.30","paired","Powdery Mildew","leaf","BarleyX","Infected",1900,"Biotroph",5570476,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.40","paired","Powdery Mildew","leaf","BarleyX","Infected",1630,"Biotroph",5650442,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RB.50","paired","Powdery Mildew","leaf","BarleyX","Infected",1350,"Biotroph",3257221,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RC.1","paired","Powdery Mildew","leaf","BarleyX","Infected",1080,"Biotroph",2437875,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RC.10","paired","Powdery Mildew","leaf","BarleyX","Infected",1010,"Biotroph",4525633,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RC.20","paired","Powdery Mildew","leaf","BarleyX","Infected",1040,"Biotroph",2163413,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RC.30","paired","Powdery Mildew","leaf","BarleyX","Infected",919.999999999999,"Biotroph",1818512,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+"RC.40","paired","Powdery Mildew","leaf","BarleyX","Infected",710,"Biotroph",1792541,"missing","Illumina Truseq",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
