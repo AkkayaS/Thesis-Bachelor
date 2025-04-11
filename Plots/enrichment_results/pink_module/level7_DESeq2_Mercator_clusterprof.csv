@@ -1,0 +1,4 @@
+"","ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"associated component *(AFR1/2)","associated component *(AFR1/2)","associated component *(AFR1/2)","1/373","1/35106",1,94.1179624664879,9.64976489177265,0.0106249643935505,0.0424998575742022,0.0223683460916853,"HORVU.MOREX.r3.2HG0095520",1
+"substrate adaptor *(NRL)","substrate adaptor *(NRL)","substrate adaptor *(NRL)","1/373","4/35106",0.25,23.529490616622,4.66963777721653,0.041829062192424,0.0693476725307468,0.0364987750161826,"HORVU.MOREX.r3.5HG0508410",1
+"substrate adaptor *(AUF)","substrate adaptor *(AUF)","substrate adaptor *(AUF)","1/373","5/35106",0.2,18.8235924932976,4.13036334694636,0.0520107543980601,0.0693476725307468,0.0364987750161826,"HORVU.MOREX.r3.4HG0380410",1
